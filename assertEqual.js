@@ -1,7 +1,7 @@
 const assertEqual = function(actual, expected) {
 
-  const passMessage = "✔✔ Test passed ✔✔: " + actual + " ===  " + expected;
-  const failMessage = "❌ Test failed ❌: " + actual + " !== " + expected;
+  const passMessage = `✔✔ Test passed ✔✔: ${actual} === ${expected}`;
+  const failMessage = `❌ Test failed ❌: ${actual} !== ${expected}`;
 
   if (actual === expected) {
     console.log(passMessage);
@@ -14,3 +14,5 @@ const assertEqual = function(actual, expected) {
 
 assertEqual("Lighthouse Labs", "Bootcamp");
 assertEqual(1, 1);
+assertEqual("Lighthouse Labs", "Lighthouse Labs");
+assertEqual(1, 0);
