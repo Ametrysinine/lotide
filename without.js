@@ -10,11 +10,12 @@ const without = function(array, itemsToRemove) {
       removalIndex = 0;
 
     } else if (array[i] === itemsToRemove[removalIndex]) {
+      removalIndex = 0;
       i++;
     } else {
       removalIndex++;
     }
-  
+
 
   }
 
