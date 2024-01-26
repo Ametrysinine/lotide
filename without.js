@@ -1,26 +1,30 @@
-// Below is the without function
-
-const without = function(array, itemsToRemove) {
-  let cleanedArray = [];
-  let removalIndex = 0;
+const existsInArray = function(item, array) {
   let i = 0;
 
   while (i < array.length) {
-    if (removalIndex === itemsToRemove.length) {
-      cleanedArray.push(array[i]);
-      i++;
-      removalIndex = 0;
-
-    } else if (array[i] === itemsToRemove[removalIndex]) {
-      i++;
-      removalIndex = 0;
+    if (item === array[i]) {
+      return true;
 
     } else {
-      removalIndex++;
+      i++;
     }
-
   }
-  return cleanedArray;
+
+  if (i === array.length) {
+    return false;
+  }
+};
+
+const without = function(array, blocklist) {
+  let cleanArray = [];
+
+  for (let i = 0; i < array.length; i++) {
+    if (!existsInArray(array[i], blocklist)) {
+      cleanArray.push(array[i]);
+    }
+  }
+
+  return cleanArray;
 };
 
 console.log(without([1, 2, 3], [1])); // => [2, 3]
