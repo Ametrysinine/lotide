@@ -1,4 +1,4 @@
-const assertArraysEqual = function(actualArray, expectedArray) {
+const assertArraysEqual = function(actualArray, expectedArray) { // Import assertArraysEqual
 
   const passMessage = `✔✔ Test passed ✔✔: ${actualArray} === ${expectedArray}`;
   const failMessage = `❌ Test failed ❌: ${actualArray} !== ${expectedArray}`;
@@ -12,7 +12,7 @@ const assertArraysEqual = function(actualArray, expectedArray) {
   
 };
 
-const eqArrays = function(arrayOne, arrayTwo) {
+const eqArrays = function(arrayOne, arrayTwo) { // Import eqArrays
   let arraysEqual = true;
 
   if (arrayOne.length !== arrayTwo.length) {
@@ -32,11 +32,13 @@ const eqArrays = function(arrayOne, arrayTwo) {
 
 const flatten = function(array) {
   let flatArray = [];
+
   for (let i = 0; i < array.length; i++) {
     if (!Array.isArray(array[i])) {
       flatArray.push(array[i]);
+
     } else {
-      for (let subIndex = 0; subIndex < array[i].length; subIndex++) {
+      for (let subIndex = 0; subIndex < array[i].length; subIndex++) { // Flattens one level of subarray
         flatArray.push(array[i][subIndex]);
       }
     }
@@ -47,3 +49,4 @@ const flatten = function(array) {
 assertArraysEqual(flatten([1, 2, 3]), [1, 2, 3]); // Pass
 assertArraysEqual(flatten([[1, 2], 3]), [1, 2, 3]); // Pass
 assertArraysEqual(flatten([[1], [2], [3]]), [1, 2, 3]); // Pass
+assertArraysEqual(flatten([1, 2, 3]), [1, 2, 4]); // Fail
