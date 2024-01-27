@@ -1,4 +1,4 @@
-const assertEqual = function(actual, expected) {
+const assertEqual = function(actual, expected) { // Import assertEqual
 
   const passMessage = `✔✔ Test passed ✔✔: ${actual} === ${expected}`;
   const failMessage = `❌ Test failed ❌: ${actual} !== ${expected}`;
@@ -8,26 +8,21 @@ const assertEqual = function(actual, expected) {
 
   } else {
     console.log(failMessage);
-
   }
 };
 
 const eqArrays = function(arrayOne, arrayTwo) {
   let arraysEqual = true;
 
-  if (arrayOne.length !== arrayTwo.length) {
+  if (arrayOne.length !== arrayTwo.length) { 
     arraysEqual = false;
 
   } else {
-    for (let i in arrayOne) {
+    for (let i in arrayOne) { // Compare each item in array
       if (arrayOne[i] !== arrayTwo[i]) {
         arraysEqual = false;
       }
-
     }
-
-
-
   }
 
   return arraysEqual;
