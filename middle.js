@@ -39,9 +39,11 @@ const middle = function(array) {
     return array.slice(sliceIndex, -sliceIndex);
   }
 };
-console.log(middle([1, 2, 3, 4, 5, 6]));
-console.log(middle([1, 2, 3, 4, 5]));
-console.log(middle([1, 2, 3, 4]));
-console.log(middle([1, 2, 3]));
-console.log(middle([1, 2]));
-// 1 check array length. 2 odd or even 3 odd protocol 4 even protocol
+
+
+assertArraysEqual(middle([1, 2, 3, 4, 5, 6]), [3, 4]); // Pass
+assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]); // Pass
+assertArraysEqual(middle([1, 2, 3, 4]), [2, 3]); // Pass
+assertArraysEqual(middle([1, 2, 3]), [2]); // Pass
+assertArraysEqual(middle([1, 2]), []); // Pass
+assertArraysEqual(middle([1]), []); // Pass
