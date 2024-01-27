@@ -18,7 +18,7 @@ const assertEqual = function(actual, expected) {
 
 const head = function(array) {
   if (Array.isArray(array)) {
-    return array[0];
+    return array[0]; // Return first element of array
   } else {
     return "This is not an array.";
   }
@@ -27,3 +27,4 @@ const head = function(array) {
 
 assertEqual(head([5,6,7]), 5);
 assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
+assertEqual(head(["Hello"]), "Hello");
