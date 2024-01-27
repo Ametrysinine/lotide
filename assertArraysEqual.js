@@ -1,5 +1,4 @@
-const assertArraysEqual = function(actualArray, expectedArray) {
-
+const assertArraysEqual = function(actualArray, expectedArray) { 
   const passMessage = `✔✔ Test passed ✔✔: ${actualArray} === ${expectedArray}`;
   const failMessage = `❌ Test failed ❌: ${actualArray} !== ${expectedArray}`;
 
@@ -12,7 +11,7 @@ const assertArraysEqual = function(actualArray, expectedArray) {
   
 };
 
-const eqArrays = function(arrayOne, arrayTwo) {
+const eqArrays = function(arrayOne, arrayTwo) { // Import eqArrays
   let arraysEqual = true;
 
   if (arrayOne.length !== arrayTwo.length) {
