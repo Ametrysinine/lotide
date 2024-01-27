@@ -28,3 +28,8 @@ const eqArrays = function(arrayOne, arrayTwo) {
   }
   return arraysEqual;
 };
+
+assertArraysEqual([1, 2, 3], [1, 2, 3]); // Pass
+assertArraysEqual([1, 2, 3], [1, 2, 4]); // Fail
+assertArraysEqual([1, 2, 3], [2, 4]); // Fail
+assertArraysEqual([1, 2, 3], [1, 2, 3, 4]); // Fail
