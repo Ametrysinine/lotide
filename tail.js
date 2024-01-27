@@ -19,9 +19,7 @@ const assertEqual = function(actual, expected) {
 const tail = function(array) {
   let tailArray = [];
   if (Array.isArray(array)) {
-    for (let i = 1; i < array.length; i++) {
-      tailArray.push(array[i]);
-    }
+    tailArray = array.slice(1);
     return tailArray;
 
   } else {
