@@ -1,4 +1,4 @@
-const assertArraysEqual = function(actualArray, expectedArray) { 
+const assertArraysEqual = function(actualArray, expectedArray) {
   const passMessage = `✔✔ Test passed ✔✔: ${actualArray} === ${expectedArray}`;
   const failMessage = `❌ Test failed ❌: ${actualArray} !== ${expectedArray}`;
 
