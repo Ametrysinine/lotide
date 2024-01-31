@@ -16,12 +16,10 @@ const countLetters = function(string) {
   const letterCount = {};
 
   for (let i of string) {
-    console.log(string[i]);
     if (i === " ") { // Skip spaces
       continue;
     } else if (letterCount.hasOwnProperty(i)) { // Check if property exists
       letterCount[i] += 1;
-      console.log("a");
     } else { // Create property if doesn't exist
       letterCount[i] = 1;
     }
