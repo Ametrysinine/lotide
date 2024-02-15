@@ -1,20 +1,4 @@
-//assertEqual import start
-
-const assertEqual = function(actual, expected) {
-
-  const passMessage = `✔✔ Test passed ✔✔: ${actual} === ${expected}`;
-  const failMessage = `❌ Test failed ❌: ${actual} !== ${expected}`;
-
-  if (actual === expected) {
-    console.log(passMessage);
-
-  } else {
-    console.log(failMessage);
-
-  }
-};
-
-//assertEqual import end
+const assertEqual = require('./assertEqual');
 
 const head = function(array) {
   if (Array.isArray(array)) {
@@ -25,6 +9,4 @@ const head = function(array) {
 
 };
 
-assertEqual(head([5,6,7]), 5);
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head(["Hello"]), "Hello");
+module.exports = head;
