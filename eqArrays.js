@@ -1,31 +1,16 @@
-const assertEqual = function(actual, expected) { // Import assertEqual
-
-  const passMessage = `✔✔ Test passed ✔✔: ${actual} === ${expected}`;
-  const failMessage = `❌ Test failed ❌: ${actual} !== ${expected}`;
-
-  if (actual === expected) {
-    console.log(passMessage);
-
-  } else {
-    console.log(failMessage);
-  }
-};
-
 const eqArrays = function(arrayOne, arrayTwo) {
-  let arraysEqual = true;
-
-  if (arrayOne.length !== arrayTwo.length) { 
-    arraysEqual = false;
+  if (arrayOne.length !== arrayTwo.length) {
+    return false;
 
   } else {
     for (let i in arrayOne) { // Compare each item in array
       if (arrayOne[i] !== arrayTwo[i]) {
-        arraysEqual = false;
+        return false;
       }
     }
   }
 
-  return arraysEqual;
+  return true;
 };
-assertEqual(eqArrays([1, 2, 3, 4], [1, 2, 3]), false); // should pass
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // => should PASS
+
+module.exports = eqArrays;
