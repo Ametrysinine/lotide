@@ -1,17 +1,3 @@
-const assertEqual = function(actual, expected) { // import assertEqual
-
-  const passMessage = `✔✔ Test passed ✔✔: ${actual} === ${expected}`;
-  const failMessage = `❌ Test failed ❌: ${actual} !== ${expected}`;
-
-  if (actual === expected) {
-    console.log(passMessage);
-
-  } else {
-    console.log(failMessage);
-
-  }
-};
-
 const countLetters = function(string) {
   const letterCount = {};
 
@@ -28,4 +14,4 @@ const countLetters = function(string) {
   return letterCount;
 };
 
-console.log(countLetters("Lighthouse Labs"));
+module.exports = countLetters;
