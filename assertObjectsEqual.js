@@ -8,11 +8,9 @@ const assertObjectsEqual = function(actualObject, expectedObject) {
 
   if (eqObjects(actualObject, expectedObject)) {
     console.log(passMessage);
-    return true;
 
   } else {
     console.log(failMessage);
-    return false;
   }
 };
 
