@@ -5,7 +5,7 @@ const letterPositions = function(string) {
     if (string[i] === " ") { // Skip spaces
       continue;
     } else if (positions.hasOwnProperty(string[i])) { // Check if array exists
-      positions[string[i]].push(i)
+      positions[string[i]].push(i);
     } else { // Create array if doesn't exist
       positions[string[i]] = [i];
     }
