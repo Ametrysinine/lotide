@@ -5,7 +5,7 @@ const tail = function(array) {
     return tailArray;
 
   } else {
-    return "This is not an array.";
+    return undefined;
   }
 };
 
